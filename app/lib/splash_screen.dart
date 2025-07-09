@@ -27,10 +27,40 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white, // Cambia a tu color preferido
-      body: Center(
-        child: Image.asset(
-          'assets/images/logo_caritas.png',
-          width: 200,
+      body: SafeArea(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            const SizedBox(), // Espaciador superior
+            Center(
+              child: Image.asset(
+                'assets/images/logo_caritas.png',
+                width: 350,
+                height: 250,
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.only(bottom: 10),
+              child: Text(
+                'Nacidos para ayudar',
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Color.fromARGB(255, 19, 50, 112),
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.only(bottom: 20),
+              child: Text(
+                'Cáritas Puebla',
+                style: TextStyle(
+                  fontSize: 14,
+                  color: Colors.grey,
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );
