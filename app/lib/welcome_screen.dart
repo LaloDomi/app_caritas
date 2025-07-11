@@ -1,3 +1,4 @@
+import 'servicios.dart';
 import 'package:flutter/material.dart';
 import 'dona_screen.dart';
 import 'info_screen.dart';
@@ -76,12 +77,16 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
       body: Stack(
         children: [
           // Fondo de imagen
-          SizedBox.expand(
-            child: Image.asset(
-              'assets/images/fondo.png', // ← Asegúrate de tener esta imagen
-              fit: BoxFit.cover,
-            ),
-          ),
+        SizedBox(
+          height: double.infinity,
+          width: double.infinity,
+          child: Image.asset(
+          'assets/images/fondo.png',
+          fit: BoxFit.cover,
+        ),
+      ),
+
+          
           // Capa opcional semitransparente para mejorar legibilidad (puedes quitarla si no la quieres)
           Container(
             color: Colors.white.withOpacity(0.66), // Puedes ajustar la opacidad
@@ -108,7 +113,11 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 const SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: () {
-                    print("Explora nuestros servicios");
+                    Navigator.push
+                    (
+                      context,
+                      MaterialPageRoute(builder: (context)=> const ServiciosScreen())
+                    );
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color.fromARGB(255, 244, 67, 54),

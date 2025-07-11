@@ -16,14 +16,14 @@ class InfoScreen extends StatelessWidget {
           // Fondo de imagen
           SizedBox.expand(
             child: Image.asset(
-              'assets/images/fondo_don.jpeg', // Asegúrate de tener esta imagen
+              'assets/images/fondo.png', // Asegúrate de tener esta imagen
               fit: BoxFit.cover,
             ),
           ),
 
           // Capa blanca con opacidad para que el texto sea más legible
           Container(
-            color: Colors.white.withOpacity(0.9),
+            color: Colors.white.withOpacity(0.6),
           ),
 
           // Contenido principal
