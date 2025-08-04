@@ -1,3 +1,4 @@
+import 'package:app/vision_screen.dart';
 import 'package:flutter/material.dart';
 import 'mision_screen.dart';
 
@@ -13,19 +14,6 @@ class InfoScreen extends StatelessWidget {
       ),
       body: Stack(
         children: [
-          // Fondo de imagen
-          SizedBox.expand(
-            child: Image.asset(
-              'assets/images/fondo.png', // Asegúrate de tener esta imagen
-              fit: BoxFit.cover,
-            ),
-          ),
-
-          // Capa blanca con opacidad para que el texto sea más legible
-          Container(
-            color: Colors.white.withOpacity(0.6),
-          ),
-
           // Contenido principal
           SingleChildScrollView(
             padding: const EdgeInsets.all(25),
@@ -62,6 +50,44 @@ class InfoScreen extends StatelessWidget {
                   },
                   icon: const Icon(Icons.info_outline),
                   label: const Text('Nuestra Misión'),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color.fromARGB(255, 244, 67, 54),
+                    foregroundColor: Colors.white,
+                    padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 30),
+                ElevatedButton.icon(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const VisionScreen()),
+                    );
+                  },
+                  icon: const Icon(Icons.info_outline),
+                  label: const Text('Nuestra Visión'),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color.fromARGB(255, 244, 67, 54),
+                    foregroundColor: Colors.white,
+                    padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
+                ),
+                   const SizedBox(height: 30),
+                ElevatedButton.icon(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const VisionScreen()),
+                    );
+                  },
+                  icon: const Icon(Icons.info_outline),
+                  label: const Text('Nuestros Valores'),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color.fromARGB(255, 244, 67, 54),
                     foregroundColor: Colors.white,

@@ -1,8 +1,9 @@
+import 'package:app/comed_screen.dart';
 import 'package:flutter/material.dart';
 import 'splash_screen.dart';
-import 'servicio1_screen.dart';
-import 'servicio2_screen.dart';
-import 'servicio3_screen.dart';
+import 'asilo_screen.dart';
+import 'dispensario_screen.dart';
+import 'centro_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,9 +19,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: const SplashScreen(), // ← Pantalla inicial
       routes: {
-        '/servicio1': (context) => const Servicio1Screen(),
-        '/servicio2': (context) => const Servicio2Screen(),
-        '/servicio3': (context)=> const Servicio3Screen(),
+        '/asilo': (context) => const AsiloScreen(),
+        '/dispensario': (context) => const DispensarioScreen(),
+        '/centro': (context)=> const Servicio3Screen(),
+        '/comedores': (context)=> const comed_screen()
       },
     );
     

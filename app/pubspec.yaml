@@ -30,10 +30,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
+  carousel_slider: ^5.1.1
   cupertino_icons: ^1.0.8
+
 
 dev_dependencies:
   flutter_test:
@@ -69,6 +68,12 @@ flutter:
         - asset: assets/fonts/Garamond/EBGaramond-Italic-VariableFont_wght.ttf
   assets:
     - assets/images/logo_caritas.png
-    - assets/images/fondo.png
     - assets/images/fondo_don.jpeg
-    -  assets/images/logo_caritas1.png
+    - assets/images/logo_caritas1.png
+    - assets/images/fondo2.png
+    - assets/images/fondo1.png
+    - assets/images/fotocarr1.png
+    - assets/images/fotocarr2.png
+    - assets/images/fotocarr3.png
+
+

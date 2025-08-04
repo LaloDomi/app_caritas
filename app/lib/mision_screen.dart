@@ -13,9 +13,14 @@ class MisionScreen extends StatelessWidget {
       body: const Padding(
         padding: EdgeInsets.all(24.0),
         child: Text(
-          'Aquí va el texto con la misión de Cáritas Puebla.\n\n'
-          'Podrás explicar con detalle los valores, objetivos y todo lo relacionado.',
-          style: TextStyle(fontSize: 18),
+          'Proporcionar con amor la ayuda necesaria a los hermanos más desprotegidos, pobres, enfermos e indigentes de la comunidad, dotándolos de servicios asistenciales con calides y calidad humana.',
+          style: TextStyle
+          (
+            fontSize: 19,
+            fontFamily:'Lato',
+            color: Colors.black87,
+          ),
+          textAlign: TextAlign.justify,
         ),
       ),
     );

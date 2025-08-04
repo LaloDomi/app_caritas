@@ -31,19 +31,12 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 color: Color.fromARGB(255, 207, 39, 39),
               ),
               child: Text(
-                'Menú',
+                'Inicio',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 30,
                 ),
               ),
-            ),
-            ListTile(
-              leading: const Icon(Icons.home),
-              title: const Text('Inicio'),
-              onTap: () {
-                Navigator.pop(context);
-              },
             ),
             ListTile(
               leading: const Icon(Icons.info),
@@ -81,36 +74,32 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           height: double.infinity,
           width: double.infinity,
           child: Image.asset(
-          'assets/images/fondo.png',
+          'assets/images/fondo2.png',
           fit: BoxFit.cover,
+          
         ),
       ),
 
           
           // Capa opcional semitransparente para mejorar legibilidad (puedes quitarla si no la quieres)
           Container(
-            color: Colors.white.withOpacity(0.66), // Puedes ajustar la opacidad
+            color: Colors.white.withOpacity(0.60), // Puedes ajustar la opacidad
           ),
           // Contenido principal
           Center(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                const SizedBox(height: 20),
-                Image.asset(
-                  'assets/images/logo_caritas.png',
-                  width: 150,
-                ),
-                const SizedBox(height: 20),
+                const SizedBox(height: 250),
                 const Text(
                   '¡Bienvenido a nuestra app!',
                   style: TextStyle(
-                    fontSize: 22,
+                    fontSize: 32,
                     fontFamily:'Garamond',
                     color: Colors.black87,
                   ),
                 ),
-                const SizedBox(height: 20),
+                
                 ElevatedButton(
                   onPressed: () {
                     Navigator.push
@@ -132,6 +121,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     style: TextStyle(fontSize: 16),
                   ),
                 ),
+                const SizedBox(height: 120),
               ],
             ),
           ),
